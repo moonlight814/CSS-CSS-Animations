@@ -1,45 +1,63 @@
 /****************************************
 * Transform
 ****************************************/
-.transform-demo > div {
-  height: 40px;
-  background: salmon;
-  width: 20%;
-  margin: auto;
-  display: inline-block;
+
+.transform-demo>div {
+    height: 40px;
+    background: salmon;
+    width: 20%;
+    margin: auto;
+    display: inline-block;
+    transform: translatex(150px);
+    opacity: 0.5;
 }
+
 
 /****************************************
 * Transition
 ****************************************/
 
 .transition-demo img {
-  margin-bottom: .5em;
-  width: 200px;
-  height: 200px;
-  filter: grayscale(100%);
-
+    margin-bottom: .5em;
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+    transition: 2s;
 }
 
 .transition-demo img:hover {
-
+    filter: none;
+    transform: rotate(360deg) scale(1.5);
 }
+
 
 /****************************************
 * Animation
 ****************************************/
 
 .bar {
-  border: 1px solid black;
-  height: 50px;
-  width: 500px;
-  margin: auto;
-  background-color: palegreen;
-
+    border: 1px solid black;
+    height: 50px;
+    width: 500px;
+    margin: auto;
+    background-color: palegreen;
+    animation-duration: 5s;
+    animation-name: sale-bar;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
 }
 
 @keyframes sale-bar {
-  0% { background-color: lightgreen; width: 450px }
-  75% { background-color: #FF033E; width: 125x }
-  100% { background-color: crimson; width: 10px }
+    0% {
+        background-color: lightgreen;
+        width: 450px
+    }
+    75% {
+        background-color: #FF033E;
+        width: 125x
+    }
+    100% {
+        background-color: crimson;
+        width: 10px
+    }
 }
